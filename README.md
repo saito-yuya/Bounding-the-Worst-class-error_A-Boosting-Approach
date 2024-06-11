@@ -1,7 +1,10 @@
 <!-- <<<<<<< HEAD -->
 
-# Bounding the Worst-class Error: A Boosting Approach
+# ICONIP2024 Submitted Version
+This is the temporary repository for [ICONIP2024](https://iconip2024.org/).
+While the paper of  ***Bounding the Worst-class Error: A Boosting Approach*** is under review, no changes, including additions or corrections, will be made to this repository .
 
+# Bounding the Worst-class Error: A Boosting Approach
 This repository provides the offical release of the code package for my paper [Bounding the Worst-class Error: A Boosting Approach](https://arxiv.org/abs/2310.14890) in Pytorch.
 The code heavily relies on [LDAM-DRW](https://github.com/kaidic/LDAM-DRW), and [IB-Loss](https://github.com/pseulki/IB-Loss).
 
