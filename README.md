@@ -1,8 +1,8 @@
 <!-- <<<<<<< HEAD -->
 
-# ICONIP2024 Submitted Version
-This is the temporary repository for [ICONIP2024](https://iconip2024.org/).
-While the paper of  ***Bounding the Worst-class Error: A Boosting Approach*** is under review, no changes, including additions or corrections, will be made to this repository .
+<!-- # Bounding the Worst-class Error: A Boosting Approach -->
+<!-- This is the temporary repository for [ICONIP2024](https://iconip2024.org/).
+While the paper of  ***Bounding the Worst-class Error: A Boosting Approach*** is under review, no changes, including additions or corrections, will be made to this repository . -->
 
 # Bounding the Worst-class Error: A Boosting Approach
 This repository provides the offical release of the code package for my paper [Bounding the Worst-class Error: A Boosting Approach](https://arxiv.org/abs/2310.14890) in Pytorch.
@@ -47,7 +47,12 @@ pip install -r requirements.txt
 
 
 ## Dataset
+This repository includes two artificial datasets and several real datasets.
 
+### Artificial dataset
+The code of `make_artificial_balanced.py`,`make_artificial_imbalanced.py` show how to create the datasets used for the artificial datasets.
+
+### Real datasets
 Create a ```data/``` directory and download the original data into this directory to generate imbalanced versions.
 - Imbalanced [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html). The original data will be downloaded and converted by `imbalancec_cifar.py`.
 - The paper also reports results on [Tiny ImageNet](http://cs231n.stanford.edu/tiny-imagenet-200.zip), [EMNIST](https://www.nist.gov/itl/products-and-services/emnist-dataset) . We will update the code for Tiny ImageNet & EMNIST later.
@@ -76,7 +81,6 @@ python cifar_train.py --dataset cifar10 -a resnet32 --loss_type WorstLoss --trai
 - Ours
 ```bash
 python ./Ours/cifar_train.py --dataset cifar10 -a resnet32 --theta 0.9 --loss_type CE --b 512 --num_classes 10 --gpu 0 
-
 ```
 
 
