@@ -50,7 +50,7 @@ pip install -r requirements.txt
 This repository includes two artificial datasets and several real datasets.
 
 ### Artificial dataset
-The code of `make_artificial_balanced.py`,`make_artificial_imbalanced.py` show how to create the datasets used for the artificial datasets.
+The code of ```artificial_datset/``` `make_artificial_balanced.py`, `make_artificial_imbalanced.py` show how to create the datasets used for the artificial datasets.
 
 ### Real datasets
 Create a ```data/``` directory and download the original data into this directory to generate imbalanced versions.
