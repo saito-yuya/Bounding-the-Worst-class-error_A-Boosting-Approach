@@ -84,7 +84,6 @@ if __name__ == '__main__':
 
     #round Number(The number of weak-learner)
     round_num = math.ceil(2*math.log(num_classes)/(gamma)**2)
-    # round_num = 3
 
     weight_tmp = torch.tensor([1/num_classes]*num_classes)
     weight.append(weight_tmp.to('cpu').detach().numpy().copy().tolist())
@@ -103,10 +102,6 @@ if __name__ == '__main__':
         weight.append(weight_tmp.to('cpu').detach().numpy().copy().tolist())
 
     print("############################ Finish Main roop ##############################")
-
-    # print(weight)
-
-    # weight_show(weight,classes,f'{args.root_log}/{args.store_name}/weight.pdf')
 
     ## validation 
     val_label,cls_num_list = make_label_clsnum(val_loader)
@@ -155,7 +150,6 @@ if __name__ == '__main__':
         check_accuracy,tmp_h,_,_  = class_wise_acc(model,test_loader,device)
         weak_preds.append(tmp_h)
 
-    ## 全モデルに対するaccuracy_list
     # res = best_N(weak_preds,test_label)
     test_h = voting(transposition(weak_preds))
 

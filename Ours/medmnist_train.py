@@ -23,10 +23,6 @@ if __name__ == '__main__':
     print("theta:" ,args.theta)
     print("device:",args.gpu)
 
-    # device = "cuda:0" if torch.cuda.is_available() else "cpu"
-    # print(f"Using {device} device")
-
-
     transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize(mean=[.5], std=[.5])
@@ -35,9 +31,6 @@ if __name__ == '__main__':
     if args.dataset == 'medmnist':
         data_flag = args.data_flag
         info = INFO[data_flag]
-        # task = info['task']
-        # n_channels = info['n_channels']
-        # n_classes = len(info['label'])
         MedMNIST = getattr(medmnist, info['python_class'])
 
         train_dataset = MedMNIST(split='train', transform=transform,download=True)
@@ -111,8 +104,6 @@ if __name__ == '__main__':
 
     
     if args.gpu is not None:
-        # torch.cuda.set_device(args.gpu)
-        # model = model.cuda(args.gpu)
         model = model.to(device)
     else:
         model = torch.nn.DataParallel(model).cuda()
