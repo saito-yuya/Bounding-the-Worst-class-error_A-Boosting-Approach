@@ -184,6 +184,15 @@ def main_worker(gpu, ngpus_per_node, args):
         elif args.loss_type == 'IBFocal':
             criterion = nn.CrossEntropyLoss(weight=None).cuda(args.gpu)
             criterion_ib = IB_FocalLoss(weight=per_cls_weights, alpha=1000, gamma=1).cuda(args.gpu)
+        elif args.loss_type == 'LA':
+            criterion = VSLoss(cls_num_list=args.cls_num_list, tau=args.tau, gamma=0,
+                               weight=per_cls_weights).cuda(args.gpu)
+        elif args.loss_type == 'CDT':
+            criterion = VSLoss(cls_num_list=args.cls_num_list, tau=0, gamma=args.gamma,
+                               weight=per_cls_weights).cuda(args.gpu)
+        elif args.loss_type == 'VS':
+            criterion = VSLoss(cls_num_list=args.cls_num_list, tau=args.tau, gamma=args.gamma,
+                               weight=per_cls_weights).cuda(args.gpu)
         else:
             warnings.warn('Loss type is not listed')
             return
