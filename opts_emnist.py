@@ -41,7 +41,7 @@ parser.add_argument('--seed', default=0, type=int,
                     help='seed for initializing training. ')
 parser.add_argument('--gpu', default=0, type=int,
                     help='GPU id to use.')
-parser.add_argument('--root_log',type=str, default='emnist_log_ijcnn')
+parser.add_argument('--root_log',type=str, default='emnist_log')
 parser.add_argument('--root_model', type=str, default='checkpoint')
 
 parser.add_argument('--gamma', default=0.15, type=float, help='VS hyperparameter') ##cifar10 CDT(0.4) VS(0.15)
