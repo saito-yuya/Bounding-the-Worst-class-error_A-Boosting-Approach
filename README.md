@@ -8,7 +8,7 @@ While the paper of  ***Bounding the Worst-class Error: A Boosting Approach*** is
 This repository provides the offical release of the code package for my paper [Bounding the Worst-class Error: A Boosting Approach](https://arxiv.org/abs/2310.14890) in Pytorch.
 The code heavily relies on [LDAM-DRW](https://github.com/kaidic/LDAM-DRW), and [IB-Loss](https://github.com/pseulki/IB-Loss).
 
-[Paper](https://arxiv.org/abs/2310.14890) | [Bibtex](url) | [Slides](url)
+<!-- [Paper](https://arxiv.org/abs/2310.14890) | [Bibtex](url) | [Slides](url) -->
 
 ## Overveiw of Our Method
 
@@ -108,9 +108,9 @@ python medmnist_train.py --dataset medmnist --data_flag tissuemnist -a resnet18 
 python ./Ours/medmnist_train.py --dataset medmnist --data_flag tissuemnist -a resnet18 --theta 0.6 --num_in_channels 1 --b 512 --num_classes 8 --loss_type CE --gpu 0 
 ```
 
-## Citation
+<!-- ## Citation -->
 
-If you find our paper and repo useful, please cite our paper
+<!-- If you find our paper and repo useful, please cite our paper -->
 
 <!-- @InProceedings{hoge,
     author    = {hoge},
@@ -120,16 +120,7 @@ If you find our paper and repo useful, please cite our paper
     year      = {hoge},
     pages     = {hoge}
 } -->
-```
-@misc{saito2023boosting,
-      title={Boosting for Bounding the Worst-class Error}, 
-      author={Yuya Saito and Shinnosuke Matsuo and Seiichi Uchida and Daiki Suehiro},
-      year={2023},
-      eprint={2310.14890},
-      archivePrefix={arXiv},
-      primaryClass={stat.ML}
-      }
-```
+
 <!-- =======
 # Boosting for Bounding the Worst-class Error (AISTATS, 2023)
 >>>>>>> 71d71e6ba1e292b2b021ccdc18890e7f9db02fb5 -->
