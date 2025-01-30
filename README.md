@@ -84,8 +84,8 @@ python ./Ours/cifar_train.py --dataset cifar10 -a resnet32 --theta 0.9 --loss_ty
 ```
 
 
-### Medmnist (TisuueMNIST)
-Fast of all, changes the code of ```models/__init__.py``` and run the listed example code.
+### Medmnist (TissueMNIST)
+First of all, changes the code of ```models/__init__.py``` and run the listed example code.
 
 ```bash
 # from .resnet_cifar import * 
